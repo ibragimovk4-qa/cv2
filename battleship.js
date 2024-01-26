@@ -12,8 +12,8 @@ var previousGuesses = []; // Массив для хранения предыду
 while (isSunk == false) { 
   guess = prompt("Готовься! Целься! Пли! (введи значение в диапазоне 0-9):");
   
-  if (guess < 0 || guess > 9) { 
-    alert("Введи значение в заданном диапазоне!");
+  if (isNaN(guess) || guess < 0 || guess > 9) { 
+    alert("Введи числовое значение в заданном диапазоне!");
   } else if (previousGuesses.includes(guess)) {
     alert("Ты уже стрелял по этой клетке!");
   } else { 
